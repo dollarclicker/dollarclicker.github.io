@@ -147,3 +147,24 @@
         background-color: rgb(119, 119, 119);
         border: 3px solid black;
     }
+
+    .billet{
+    opacity: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 48%;
+    background: url('dollar.png') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 2em;
+    aspect-ratio: 1/1;
+    font-size: 2em;
+    transition: all 600ms ease-out;
+    animation: 1s ease flou;
+}
+
+@keyframes flou {
+    from{opacity: 100%;}
+    to{opacity: 0%;}
+}
