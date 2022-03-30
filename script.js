@@ -82,7 +82,7 @@ const button = document.querySelector('#button');
             }
         },50)
 
-function billeterie(){
+        function billeterie(){
             var billets = document.getElementsByClassName("billet")
             for ( var i=0; i < billets.length; i++ ) {
      
@@ -105,13 +105,9 @@ function billeterie(){
             }
             
             
-            function getRandomNumber(min, max) {
-                
-              return Math.random() * (max - min) + min;
-                
-            }
-            
-            
+  
+        function getRandomNumber(min,max){
+                return Math.random() * (max-min) + min;
         }
         
       
