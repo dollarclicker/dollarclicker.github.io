@@ -92,10 +92,13 @@
         
     }
 
-    #prix,#prix_val,#score_par_sec, #clics,#titre{
+    #prix,#prix_val,#score_par_sec, #clics{
         color:rgb(20, 167, 64);
     }
 
+    #titre{
+        color:rgb(20, 167, 64);
+    }
 
     .cotedroit button{
         display: block;
