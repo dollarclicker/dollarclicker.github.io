@@ -154,6 +154,7 @@
         opacity: 100%;
         position: absolute;
         z-index: 999;
+        pointer-events: none;
         top: 50%;
         left: 48%;
         background: url('dollar.png') ;
