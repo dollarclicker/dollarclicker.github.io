@@ -12,8 +12,13 @@ const button = document.querySelector('#button');
         function ajouter(){
             argent += nbr_valeur;
             document.getElementById('clics').innerHTML = argent;
-            
-    
+            var tag = document.createElement("p")
+            tag.classList.add('billet')
+            var text = document.createTextNode("");
+            tag.appendChild(text);
+            var element = document.getElementById("dollars");
+            element.appendChild(tag)
+            billeterie()
         };
 
         function acheter_amelio(){
