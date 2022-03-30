@@ -81,6 +81,38 @@ const button = document.querySelector('#button');
                 document.getElementById('boutonvaleur').className = "achetable";
             }
         },50)
+
+function billeterie(){
+            var billets = document.getElementsByClassName("billet")
+            for ( var i=0; i < billets.length; i++ ) {
+     
+                
+                var thisDiv = billets[i];
+                
+                
+                randomTop = getRandomNumber(0, winHeight);
+                randomLeft = getRandomNumber(0, winWidth);
+                
+                
+                
+                thisDiv.style.top = randomTop +"px";
+                thisDiv.style.left = randomLeft +"px";
+                
+                
+                setTimeout(function(){
+                    thisDiv.remove();
+                }, 1000);
+            }
+            
+            
+            function getRandomNumber(min, max) {
+                
+              return Math.random() * (max - min) + min;
+                
+            }
+            
+            
+        }
         
       
         
