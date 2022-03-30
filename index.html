@@ -9,12 +9,13 @@
         <title>DollarClicker</title>
         
     </head>
-    <body>
+    <body onload="load()">
         <header>
             
-            <a href="index.html">Reset</a>
+            <a onclick="verifier()" class="bouton">Reset</a>
             <a id="titre">Dollar Clicker</a>
-            <a href="https://dcjetc.com/meriadec-legal/" target="_blank" rel="noopener noreferrer">Dec</a><a href="https://kilyantual.github.io/" target="_blank" rel="noopener noreferrer">Awikz</a>
+            <a onclick="alerter('Partie sauvegardée !');save()" class="bouton">Save Game</a>
+            <a href="https://dcjetc.com/meriadec-legal/" target="_blank" rel="noopener noreferrer" class="bouton links" >Dec</a><a href="https://kilyantual.github.io/" target="_blank" rel="noopener noreferrer" class="bouton links">Awikz</a>
         
         </header>
         <div class="page">
