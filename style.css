@@ -135,10 +135,12 @@
         border: 3px solid black;
         box-shadow: 2px 2px 2px 2px black;
         transition: 0.2s;
+        pointer-events: none;
     }
 
     .pasachetable #prix, .pasachetable #prix_val{
         color:black;
+        
     }
     
     .pasachetable:hover{

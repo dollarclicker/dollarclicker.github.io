@@ -7,7 +7,10 @@ const button = document.querySelector('#button');
         var nbr_ameliorateur = 0;
         var nbr_valeur = 1;
         var score_par_sec = 0;
-        
+        var cote_gauche = document.querySelector(".cotegauche")
+
+        var winWidth = cote_gauche.offsetWidth;
+        var winHeight = cote_gauche.offsetHeight;
 
         function ajouter(){
             argent += nbr_valeur;
@@ -53,7 +56,6 @@ const button = document.querySelector('#button');
         }
 
         
-
         
         function score(){
             score_par_sec = nbr_ameliorateur
@@ -63,6 +65,7 @@ const button = document.querySelector('#button');
        
         setInterval(function(){
 
+            console.log(argent-argent_seconde_precedente)
             argent += score_par_sec;
             if (argent-argent_seconde_precedente>=0){
                 document.getElementById('score_par_sec').innerHTML = argent-argent_seconde_precedente;
@@ -90,7 +93,7 @@ const button = document.querySelector('#button');
         function billeterie(){
             var billets = document.getElementsByClassName("billet")
             for ( var i=0; i < billets.length; i++ ) {
-     
+ 	
                 
                 var thisDiv = billets[i];
                 
@@ -110,10 +113,11 @@ const button = document.querySelector('#button');
             }
             
             
-  
-        function getRandomNumber(min,max){
-                return Math.random() * (max-min) + min;
+            function getRandomNumber(min, max) {
+                
+              return Math.random() * (max - min) + min;
+                
+            }
+            
+            
         }
-        
-      
-        
