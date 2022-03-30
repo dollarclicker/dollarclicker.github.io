@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@900&display=swap');
+
+    @font-face {
+        font-family: 'Grobold';
+        src: url(fonts/GROBOLD.ttf);
+    }
+
+    html{
+    font-family: 'Grobold';
+    letter-spacing: 0.1em;
+    background-color: rgb(252, 242, 230);
+    }   
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    p{
+        display: inline;
+    }
+
+    #bouton_principal{
+        display: block;
+        width: 40%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 0.2s;
+    }
+
+    #bouton_principal:hover{
+        width: 42%;
+        transition: transform scale(1.5);
+    }
+
+    #dollar_par_sec{
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    #bourse{
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .cotegauche, .cotedroit{
+        margin: 2%;
+        padding: 2%;
+        width: 48%;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    
+
+    .val, .amelio{
+        text-align: center;  
+
+    }
+    
+    .nombre_obj{
+        padding-top: 1vw;
+        font-size: 1.3em;
+    }
+    
+
+    header a{
+        display: flex;
+        margin: 0 auto 0 auto;
+    }
+
+    header{
+        vertical-align: auto;
+        width: 97;
+        display: flex;
+        height: 1.5em;
+        font-size: 3em;
+        padding: 0.3em;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        margin: 1vw;
+    }
+
+    .page{
+        display: flex;
+        
+    }
+
+    #prix,#prix_val,#score_par_sec, #clics{
+        color:rgb(20, 167, 64);
+    }
+
+
+    .cotedroit button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1vw;
+        border-radius: 50px;
+        font-family: 'Grobold';
+        font-size: 1.5em;
+        margin-top: 2vw;
+    }
+
+    .cotedroit button:hover{
+        transition: 0.2s;
+        font-size: 1.6em;
+    }
+
+    .achetable{
+        
+        background-color: white;
+        border: 3px solid black;
+        box-shadow: 2px 2px 2px 2px black;
+        transition: 0.2s;
+    }
+
+    .achetable:hover{
+        background-color: rgb(119, 119, 119);
+        border: 3px solid white;
+        color: white;
+        box-shadow: 2px 2px 2px 2px white;
+    }
+
+    .pasachetable{
+        background-color: gray;
+        color:black;
+        
+        border: 3px solid black;
+        box-shadow: 2px 2px 2px 2px black;
+        transition: 0.2s;
+    }
+
+    .pasachetable #prix, .pasachetable #prix_val{
+        color:black;
+    }
+    
+    .pasachetable:hover{
+        color:black;
+        box-shadow: 2px 2px 2px 2px black;
+        background-color: rgb(119, 119, 119);
+        border: 3px solid black;
+    }

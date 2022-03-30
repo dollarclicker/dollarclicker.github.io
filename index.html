@@ -1,260 +1,50 @@
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloc Clicker</title>
-</head>
-<body>
-    <div id="menu">
-        <a href="" class="button" id="un">Bloc Clicker</a>
-        <a href="" class="button" id="deux">Play</a>
-        <a href="" class="button" id="trois">About</a>
-    </div>
-    <div class="reste">
-         
-        <button onclick="ajouter()" id="button">
-            Cliquez ici !
-        </button>
-        <div class="argent1"><p>Vous generez </p><p id="score_par_sec">0</p><p> $ par seconde !</p></div>
-        <div class="argent">
-            <p>Vous avez </p><p id="clics">0</p><p> $</p>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="image/dollar.png">
+        <title>DollarClicker</title>
+        
+    </head>
+    <body>
+        <header>
+            
+            <a href="index.html">Reset</a>
+            <a>Dollar Clicker</a>
+            <a>???</a>
+        
+        </header>
+        <div class="page">
+            <div class="cotegauche">
+                <div id="dollar_par_sec">
+                    <p>Vous générez </p><p id="score_par_sec">0</p><p> $ par seconde !</p>
+                </div>
+                <img src="image/dollar.png" onclick="ajouter()" id="bouton_principal">
+                
+                <div id="bourse">
+                    <p>Vous avez </p><p id="clics">0</p><p> $</p>
+                </div>
+            </div>
+            <div class="cotedroit">
+                <div class="amelio">
+                    <button id="boutonamelio" onclick="acheter_amelio()">Acheter un améliorateur pour <p id="prix">20</p> $</button>
+                    <div class="nombre_obj">
+                        <p>Vous avez </p> <p id="ameliorateur">0</p><p id="pluriel"> améliorateur</p>
+                    </div>
+                </div>
+                <div class="val">
+                    <button id="boutonvaleur" onclick="acheter_valeur()">Acheter une amélioration de valeur pour <p id="prix_val">100</p> $</button>
+                    <div class="nombre_obj">
+                        <p>Vous avez </p> <p id="amelioration_val">0</p><p> améliorations de valeur</p>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
-        <div class="money"><button id="button" onclick="acheter_amelio()">Acheter un ameliorateur pour <p id="prix">20</p><p> $</p></button></div>
-        <div class="money"><button id="button" onclick="acheter_valeur()">Acheter une amelioration de valeur pour <p id="prix_val">100</p><p> $</p></button></div>
-        <div class="argent1"><p>Vous avez </p> <p id="ameliorateur">0</p><p id="pluriel"> ameliorateur</p></div>
-        <div class="argent1"><p>Vous avez </p> <p id="amelioration_val">0</p><p id="pluriel"> ameliorations de valeur</p></div>
-        
-
-
-        
-            
-
-
-
-
-
-
-        <img src="https://www.pngmart.com/files/13/Super-Mario-Bros-Transparent-PNG.png" alt="Mario" height="250px">
-        <img src="https://www.pngplay.com/wp-content/uploads/11/Super-Mario-World-Transparent-PNG.png" alt="une étoile" height="250px">
-    </div>
-    
-    <style>
-        
-        @font-face {
-            font-family: mario-54;
-            src: url(SuperMario256.ttf);
-        }
-
-        *{
-            margin:0;
-            padding:0;
-            
-        }
-
-        body{
-            margin:0;
-            display: inline-block;
-            font-family: mario-54;
-            padding:0;
-            background-color: #e5e5f7;
-            background-image: linear-gradient(0deg, rgba(243, 91, 91, 0.726) 50%, rgb(238, 98, 98) 50%);
-            background-size: 20px 20px;
-            text-decoration: none;
-            color: #dadada;
-            text-transform: uppercase;
-            font-weight: 1000;
-            -webkit-text-stroke:0.05em black;
-            overflow: hidden;
-            width: 100vw;
-        }
-
-        #menu{
-            
-            margin:none;
-            width: 100vw;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background-color: rgba(248, 81, 81, 0.774);
-            height: 1.5em;
-            font-size: 2.7em;
-            padding:0.2em;
-        }
-
-        #menu a{
-            text-decoration: none;
-            color: #dadada;
-            text-transform: uppercase;
-            font-weight: 1000;
-            -webkit-text-stroke:0.05em black;
-            padding:7px 1em 7px 1em;
-            background-color: rgb(248, 106, 106);
-            border-radius: 0.5em;
-            box-shadow: 0 0 10px rgb(119, 58, 58);
-            transition: all 300ms ease;
-            letter-spacing: 0.06em;
-            
-        }
-        
-        #menu a:hover{
-            box-shadow: inset 0 0 5px rgb(99, 55, 55);
-            background-color: rgb(251, 90, 90);
-            color: #efefef;
-        }
-        
-        #un{
-            margin:0 auto 0 1em;
-        }
-
-        #trois{
-            margin:0 1.2em 0 auto;
-        }
-
-        .reste{
-            text-align: center;
-            margin:2rem; 
-            font-size: 2rem;
-            justify-content: center;
-            -webkit-text-stroke:0.06em black;
-        }
-
-        p{
-            margin-top:1em;
-            display: block;
-        }
-
-        button{
-            border: none;
-            padding:0.5em;
-            border-radius: 0.6em;
-            background-color: rgb(255, 184, 172);
-            font-size: 1em;
-            font-family: mario-54;
-            color: #dadada;
-            -webkit-text-stroke:0.05em black;
-            box-shadow: 0 0 15px black;
-            border: 2px solid #0e0e0e;
-            transition: all 150ms ease;
-            margin-top: 0.2em;
-            letter-spacing: 0.1em;
-        }
-
-        button:hover{
-            box-shadow: 0 0 10px black;
-        }
-
-        button:active{
-            box-shadow: inset 0 0 7px black;
-        }
-        
-        
-
-        .argent{
-            font-size: 1.5em;
-            display: flex;
-            justify-content: center;
-            margin: 0.5em 0 0.3em 0;
-            color: goldenrod;
-        }
-
-        .argent p{
-            margin: 0 0.2em 0 0.2em;
-        }
-
-        .argent1 p{
-            margin: 0 0.2em 0 0.2em;
-        }
-
-        .argent1{
-            font-size: 1.2em;
-            display: flex;
-            justify-content: center;
-            margin: 0.5em 0 0.3em 0;
-        }
-
-        
-
-        #button p{
-            margin: 0 0.1em 0 0.1em;
-            display: inline;
-        }
-
-        
-        
-
-    </style>
-    <script>
-        
-        const button = document.querySelector('#button');
-        var nbr = 0;
-        var prix = 20;
-        var prix_valeur = 100;
-        var ameliorateur = 0;
-        var valeur = 1;
-        var score_par_sec = 0;
-        var nbr_actuel = 0;
-
-        function ajouter(){
-            nbr += valeur;
-            document.getElementById('clics').innerHTML = nbr;
-            
-    
-        };
-
-        function acheter_amelio(){
-            if(nbr>=prix){
-                nbr = nbr - prix;
-                document.getElementById('clics').innerHTML = nbr;
-                prix = parseInt(prix*1.2);
-                document.getElementById('prix').innerHTML = prix;
-                ameliorateur += 1;
-                if (ameliorateur>1){
-                    document.getElementById('pluriel').innerHTML = ' améliorateurs';
-
-                };
-                document.getElementById('ameliorateur').innerHTML = ameliorateur;
-                score()
-        
-            };
-        };
-
-        function acheter_valeur(){
-            if (nbr>=prix_valeur){
-                nbr = nbr-prix_valeur
-                valeur += 1
-                document.getElementById('clics').innerHTML = nbr;
-                prix_valeur  = parseInt(prix_valeur*1.1);
-                document.getElementById('prix_val').innerHTML = prix_valeur;
-                document.getElementById('amelioration_val').innerHTML = valeur;
-                
-                
-            }
-        }
-
-        
-
-        
-        function score(){
-            score_par_sec = ameliorateur
-            document.getElementById('score_par_sec').innerHTML = score_par_sec
-        }
-
-       
-        setInterval(function(){
-
-            console.log(nbr-nbr_actuel)
-            nbr += score_par_sec;
-            if (nbr-nbr_actuel>=0){
-                document.getElementById('score_par_sec').innerHTML = nbr-nbr_actuel;
-            }
-            document.getElementById('clics').innerHTML = nbr;
-            nbr_actuel = nbr;
-            
-
-        }, 1000 );
-        
-        
-    </script>
-</body>
+    </body>
+    <script src="script.js"></script>
 </html>
