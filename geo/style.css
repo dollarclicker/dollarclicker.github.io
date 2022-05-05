@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    font-style: none;
+    text-decoration: none;
+}
+
+html{
+    background-color: rgb(31, 31, 31);
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+
+button{
+    background-color: rgb(31, 31, 31);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border: solid white 2px;
+    
+}
+
+p{
+    display: inline;
+    
+}
+
+#listespays{
+    display: flex;
+}
